@@ -17,7 +17,7 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
-      ? 'https://h5.mindcherish.com/'
+      ? 'https://h5.mindcherish.com'
       : config.dev.assetsPublicPath
   },
   resolve: {

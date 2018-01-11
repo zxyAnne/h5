@@ -141,13 +141,12 @@ export default {
       this.play_or_pause();
       this.scroll_top_func();
       this.listen_link_func();
-
-
+      
       //app内调用window.mindcherish.actionFromJsContentLoaded()
       if(this.isApp){
           window.mindcherish.actionFromJsContentLoaded();
-          this.listen_share_func();
       }
+      this.listen_share_func();
   },
   methods:{
       play_toggle(){
@@ -204,7 +203,12 @@ export default {
             "link": "http://m.mindcherish.com/article/content?id=20180111", // 分享链接
             "imgUrl": "http://m.mindcherish.com/public/sharelogo.png"
         }
-        window.mindcherish.actionFromJsWithSetShareObject(JSON.stringify(shareObject));
+        if(this.isApp){
+            window.mindcherish.actionFromJsWithSetShareObject(JSON.stringify(shareObject));
+        }else{
+            wechatShare(shareObject);
+        }
+        
     }
   },
   watch: {
