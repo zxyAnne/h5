@@ -142,9 +142,11 @@ export default {
       this.scroll_top_func();
       this.listen_link_func();
 
+
       //app内调用window.mindcherish.actionFromJsContentLoaded()
       if(this.isApp){
           window.mindcherish.actionFromJsContentLoaded();
+          this.listen_share_func();
       }
   },
   methods:{
@@ -179,11 +181,12 @@ export default {
       },
       listen_link_func(){
         var dom_a = document.querySelectorAll('a');
+        var that = this;
         for(let i = 0; i < dom_a.length; i++){
             dom_a[i].addEventListener('click',function(e){
                 let link_href = this.getAttribute('href');
                 if(link_href.indexOf('#')===0) return;
-                if(this.isApp){
+                if(that.isApp){
                     link_href =  link_href.replace('http://m.mindcherish.com',location.origin);
                     window.mindcherish.actionFromJsWithRedirectTo(link_href);
                 }else{
@@ -193,6 +196,15 @@ export default {
                 e.preventDefault();
             });
         }
+    },
+    listen_share_func(){
+        var shareObject = {
+            "title": "扑克财经2017年度盘点", // 分享标题
+            "desc": "与数万行业资深从业者一起，用专业的力量，连接起产业和金融",
+            "link": "https://h5.mindcherish.com/review2017", // 分享链接
+            "imgUrl": "http://m.mindcherish.com/public/sharelogo.png"
+        }
+        window.mindcherish.actionFromJsWithSetShareObject(JSON.stringify(shareObject));
     }
   },
   watch: {
