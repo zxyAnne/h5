@@ -4,7 +4,7 @@
       <!-- <img src="../assets/banner_new.png" alt=""> -->
       <div style="" class="index-video">
           <div v-show="!isMobile" id="video_btn" @click="play_toggle()" class="index-video-playbtn"></div>
-          <video poster="static/video_start.png"  playsinline webkit-playsinline  id="video" preload="true" controls="controls" src="../assets/video.mp4"></video>
+          <video poster="/static/video_start.png"  playsinline webkit-playsinline  id="video" preload="true" controls="controls" src="http://image.mindcherish.com/h5/review2017.mp4"></video>
       </div>
       <div class="index-main-content">
           <div class="content-tips">
@@ -13,13 +13,13 @@
           <!-- 专家 -->
           <div style="margin-top: 0;" class="content-main">
               <img class="content-main-title" src="../assets/expert.png" alt="">
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/25085">
+              <a class="content-list" href="http://m.mindcherish.com/user/25085">
                   <img src="../assets/expert_1.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/11762">
+              <a class="content-list" href="http://m.mindcherish.com/user/11762">
                   <img src="../assets/expert_2.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/23931">
+              <a class="content-list" href="http://m.mindcherish.com/user/23931">
                   <img src="../assets/expert_3.png" alt="">
               </a>
               <router-link class="index-link" to="/expert" ><img  src="../assets/link.png" alt=""></router-link>
@@ -27,13 +27,13 @@
           <!-- 学习 -->
           <div class="content-main">
               <img class="content-main-title" src="../assets/learn.png" alt="">
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/13025">
+              <a class="content-list" href="http://m.mindcherish.com/user/13025">
                   <img src="../assets/learn_1.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/17216">
+              <a class="content-list" href="http://m.mindcherish.com/user/17216">
                   <img src="../assets/learn_2.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/10866">
+              <a class="content-list" href="http://m.mindcherish.com/user/10866">
                   <img src="../assets/learn_3.png" alt="">
               </a>
               <router-link class="index-link" to="/learn"><img  src="../assets/link.png" alt=""></router-link>
@@ -140,6 +140,8 @@ export default {
         }
       this.play_or_pause();
       this.scroll_top_func();
+      this.listen_link_func();
+
   },
   methods:{
       play_toggle(){
@@ -170,7 +172,19 @@ export default {
                   that.isShowDownInfo = false;
               }
           });
-      }
+      },
+      listen_link_func(){
+        var dom_a = document.querySelectorAll('a');
+        for(let i = 0; i < dom_a.length; i++){
+            dom_a[i].addEventListener('click',function(e){
+                let link_href = this.getAttribute('href').substr(24);
+                if(this.isApp_flage){
+                    e.preventDefault();
+                    window.mindcherish.actionFromJsWithRedirectTo('/account/login?redirect_url=' + encodeURIComponent(link_href));
+                }
+            });
+        }
+    }
   },
   watch: {
     //   isPlaying(newVal,oldVal){

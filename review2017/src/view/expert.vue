@@ -9,34 +9,34 @@
         <!-- 专家 -->
           <div class="content-main">
               <img class="content-main-title" src="../assets/expert.png" alt="">
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/25085">
+              <a class="content-list" href="http://m.mindcherish.com/user/25085">
                   <img src="../assets/expert_1.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/11762">
+              <a class="content-list" href="http://m.mindcherish.com/user/11762">
                   <img src="../assets/expert_2.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/23931">
+              <a class="content-list" href="http://m.mindcherish.com/user/23931">
                   <img src="../assets/expert_3.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/16991">
+              <a class="content-list" href="http://m.mindcherish.com/user/16991">
                   <img src="../assets/expert_4.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/10707">
+              <a class="content-list" href="http://m.mindcherish.com/user/10707">
                   <img src="../assets/expert_5.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/12796">
+              <a class="content-list" href="http://m.mindcherish.com/user/12796">
                   <img src="../assets/expert_6.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/10708">
+              <a class="content-list" href="http://m.mindcherish.com/user/10708">
                   <img src="../assets/expert_7.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/10704">
+              <a class="content-list" href="http://m.mindcherish.com/user/10704">
                   <img src="../assets/expert_8.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/12687">
+              <a class="content-list" href="http://m.mindcherish.com/user/12687">
                   <img src="../assets/expert_9.png" alt="">
               </a>
-              <a class="content-list" href="http://m.mindcherish.com/expert/ng?!#/user/11521">
+              <a class="content-list" href="http://m.mindcherish.com/user/11521">
                   <img src="../assets/expert_10.png" alt="">
               </a>
           </div>
