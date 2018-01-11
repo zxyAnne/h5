@@ -103,7 +103,7 @@ export default {
       scroll_top_func(){
           var that = this;
           window.addEventListener('scroll',function(){
-              if(document.body.scrollTop > 100){
+              if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
                   that.isShowDownInfo = true;
               }else{
                   that.isShowDownInfo = false;
