@@ -25,7 +25,7 @@ function getScript() {
     return new Promise((resolve, reject) => {
       // console.log(window.location.href)
       axios({
-        url: 'http://m.mindcherish.com/rpc/wechat/sign',//后台索要的算法签名
+        url: location.protocol+'//m.mindcherish.com/rpc/wechat/sign',//后台索要的算法签名
         method: 'get',
         dataType: 'jsonp',
         data: {
@@ -58,7 +58,7 @@ function getScript() {
           title: `分享的标题`,
           desc: `内容`,
           link: `${window.location.href}`,
-          imgUrl: '"http://m.mindcherish.com/public/sharelogo.png"', //分享出来的图片的
+          imgUrl: "https://m.mindcherish.com/public/sharelogo.png", //分享出来的图片的
           success: function (res) {
   
           },
