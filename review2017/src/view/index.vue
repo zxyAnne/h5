@@ -142,6 +142,10 @@ export default {
       this.scroll_top_func();
       this.listen_link_func();
 
+      //app内调用window.mindcherish.actionFromJsContentLoaded()
+      if(this.isApp){
+          window.mindcherish.actionFromJsContentLoaded();
+      }
   },
   methods:{
       play_toggle(){
@@ -177,11 +181,15 @@ export default {
         var dom_a = document.querySelectorAll('a');
         for(let i = 0; i < dom_a.length; i++){
             dom_a[i].addEventListener('click',function(e){
-                let link_href = this.getAttribute('href').substr(24);
-                if(this.isApp_flage){
-                    e.preventDefault();
-                    window.mindcherish.actionFromJsWithRedirectTo('/account/login?redirect_url=' + encodeURIComponent(link_href));
+                let link_href = this.getAttribute('href');
+                if(this.isApp){
+                    link_href =  link_href.replace('http://m.mindcherish.com',location.origin);
+                    window.mindcherish.actionFromJsWithRedirectTo(link_href);
+                }else{
+                    link_href +=  (link_href.indexOf('?')!=-1?'&':'?')+'sharewith=review2017';
+                    location.href = link_href
                 }
+                e.preventDefault();
             });
         }
     }
