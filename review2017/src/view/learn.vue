@@ -131,7 +131,7 @@ export default {
         var shareObject = {
             "title": "扑克财经2017年度盘点", // 分享标题
             "desc": "与数万行业资深从业者一起，用专业的力量，连接起产业和金融",
-            "link": "https://h5.mindcherish.com/review2017", // 分享链接
+            "link": "http://m.mindcherish.com/article/content?id=20180111", // 分享链接
             "imgUrl": "http://m.mindcherish.com/public/sharelogo.png"
         }
         window.mindcherish.actionFromJsWithSetShareObject(JSON.stringify(shareObject));
