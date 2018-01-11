@@ -32,7 +32,7 @@ function getScript() {
           url: encodeURIComponent(window.location.href.split('#')[0]),
         },
       }).then(function(ret) {
-        resolve(ret)
+        resolve(ret.data)
       }).catch(function(ret) {
           reject( ret );
         })
