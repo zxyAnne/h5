@@ -28,11 +28,11 @@ function getScript() {
         url: location.protocol+'//m.mindcherish.com/rpc/wechat/sign',//后台索要的算法签名
         method: 'get',
         dataType: 'jsonp',
-        data: {
+        params: {
           url: encodeURIComponent(window.location.href.split('#')[0]),
         },
       }).then(function(ret) {
-        resolve(ret.data)
+        resolve(ret.data.data)
       }).catch(function(ret) {
           reject( ret );
         })
