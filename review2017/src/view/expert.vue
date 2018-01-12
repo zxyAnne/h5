@@ -3,8 +3,9 @@
         <div class="expert-title">
             <img src="../assets/detail_logo.png" alt="">
         </div>
-        <div class="content-tips">
+        <div style="padding-bottom: 1px;" class="content-tips">
             <span>数据来源：基于扑克财经App大数据</span>
+            <p>点击智咖即可查看智咖详情</p>
         </div>
         <!-- 专家 -->
           <div class="content-main">
