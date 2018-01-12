@@ -203,12 +203,10 @@ export default {
             "link": "http://m.mindcherish.com/article/content?id=20180111", // 分享链接
             "imgUrl": "http://m.mindcherish.com/public/sharelogo.png"
         }
-        if(this.isApp){
+        if(typeof window.mindcherish.actionFromJsWithSetShareObject !='undefined'){
             window.mindcherish.actionFromJsWithSetShareObject(JSON.stringify(shareObject));
-        }else{
-            wechatShare(shareObject);
         }
-        
+        wechatShare(shareObject);
     }
   },
   watch: {

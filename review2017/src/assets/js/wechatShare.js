@@ -47,7 +47,7 @@ function getScript() {
       try{
         let isWechat=navigator.userAgent.indexOf('MicroMessenger')>-1 //判断为微信浏览器
         if(!isWechat){
-          //return resolve('not weichat')
+          return resolve('not weichat')
         }
         if(!window.wx){
           await getScript();
