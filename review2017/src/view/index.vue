@@ -4,7 +4,7 @@
       <!-- <img src="../assets/banner_new.png" alt=""> -->
       <div style="" class="index-video">
           <div v-show="!isMobile" id="video_btn" @click="play_toggle()" class="index-video-playbtn"></div>
-          <video poster="/static/video_start.png"  playsinline webkit-playsinline  id="video" preload="true" controls="controls" src="https://static2.mindcherish.com/h5/review2017.mp4"></video>
+          <video poster="../assets/video_start.jpg" preload="metadata" playsinline webkit-playsinline  id="video" controls="controls" src="https://static2.mindcherish.com/h5/review2017.mp4"></video>
       </div>
       <div class="index-main-content">
           <div class="content-tips">
