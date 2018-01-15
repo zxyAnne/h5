@@ -124,6 +124,7 @@ export default {
         for(let i = 0; i < dom_a.length; i++){
             dom_a[i].addEventListener('click',function(e){
                 let link_href = this.getAttribute('href');
+                if(link_href.indexOf('#')===0) return;
                 if(that.isApp){
                     link_href =  link_href.replace('http://m.mindcherish.com',location.origin);
                     window.mindcherish.actionFromJsWithRedirectTo(link_href);

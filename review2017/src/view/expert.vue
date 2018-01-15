@@ -41,7 +41,7 @@
                   <img src="../assets/expert_10.png" alt="">
               </a>
           </div>
-          <div v-show="!isApp && isShowDownInfo" class="index-bottom">
+          <div v-show="isApp && isShowDownInfo" class="index-bottom">
             <img src="../assets/code.png" alt="">
             <h5>扫码关注扑克财经</h5> 
             <div class="index-bottom-download">
@@ -49,7 +49,7 @@
             </div>        
           </div>
             <!-- 子页返回按钮 -->
-          <div v-show="isApp" class="index-bottom">
+          <div v-show="!isApp" class="index-bottom">
               <img style="width: 50%; margin-top: 20px;" src="../assets/app_back.png" alt="">
               <div class="index-bottom-download">
                 <router-link to="/">返回榜单首页</router-link>
@@ -125,6 +125,7 @@ export default {
         for(let i = 0; i < dom_a.length; i++){
             dom_a[i].addEventListener('click',function(e){
                 let link_href = this.getAttribute('href');
+                if(link_href.indexOf('#')===0) return;
                 if(that.isApp){
                     link_href =  link_href.replace('http://m.mindcherish.com',location.origin);
                     window.mindcherish.actionFromJsWithRedirectTo(link_href);
