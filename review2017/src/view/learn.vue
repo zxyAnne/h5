@@ -46,6 +46,13 @@
 <div class="index-bottom-download">
             <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.pouke.mindcherish&ADTAG=mobile">点击下载扑克财经App</a>
           </div>        </div>
+          <!-- 子页返回按钮 -->
+          <div v-show="isApp" class="index-bottom">
+              <img style="width: 50%; margin-top: 20px;" src="../assets/app_back.png" alt="">
+              <div class="index-bottom-download">
+                <router-link to="/">返回榜单首页</router-link>
+              </div>
+          </div>
     </div>
 </template>
 
