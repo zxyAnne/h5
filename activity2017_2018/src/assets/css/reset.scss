@@ -1,0 +1,33 @@
+/*reset 重置*/
+body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,
+td,th,button,strong,em,select,video,canvas{margin:0;padding:0;}
+li{list-style:none;}
+table{ border-collapse:collapse;}
+textarea{resize:none;overflow:auto;}
+img{ border:none;
+    /*vertical-align:middle;*/
+    max-width: 100%;
+}
+em{ font-style:normal;}
+a{ text-decoration:none;color:#666;}
+a:focus, a:hover{text-decoration:none;}
+i{ font-style:normal; }
+a,input{-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;appearance: none;
+-webkit-tap-highlight-color:rgba(0,0,0,0);border:none;}
+a, img {/* 禁止长按链接与图片弹出菜单 */-webkit-touch-callout: none; -moz-touch-callout: none;-ms-touch-callout: none;-o-touch-callout: none;-webkit-touch-callout: none;}
+input:focus{outline: none;}
+html, body {/* 禁止选中文本(如无文本选中需求,此为必选项)-webkit-user-select: none; user-select: none; */cursor: pointer;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+
+*{
+    box-sizing: border-box !important;
+}
+html, body{
+    font-size :20px;
+    word-break: break-word;
+    font-family:"Microsoft YaHei","simsun","Helvetica Neue", "Arial", "Helvetica", "sans-serif";
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100%;
+    // background: rgb(204,55,57);
+}
