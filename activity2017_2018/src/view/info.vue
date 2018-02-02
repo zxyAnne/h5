@@ -1,6 +1,10 @@
 <template>
     <div class="info-box">
         <div class="info-box-content-box">
+            <div class="info-box-content-box-img img-left-top"></div>
+            <div class="info-box-content-box-img img-left-bottom"></div>
+            <div class="info-box-content-box-img img-right-top"></div>
+            <div class="info-box-content-box-img img-right-bottom"></div>
             <div class="content-item">
                 <span class="content-item-title"> 一、活动时间</span>           
                 <div>
@@ -27,39 +31,11 @@
 </template>
 
 <style type="text/sass" lang="scss" scoped>
-    .info-box{
-        width: 100%;
-        height: 100%;
-        padding-top: 16px;
-        background-color: rgb(204,55,57);
-        &-content-box{
-            width: 88%;
-            margin: 0 auto;
-            padding: 0 12px 30px;
-            border: solid 1px white;
-            font-size: 14px;
-            line-height: 1.5;
-            color: black;
-        }
-        .content-item{
-            margin-top: 30px;
-            &-title{
-                font-size: 16px;
-                font-weight: bold;
-            }
-            div{
-                margin-top: 8px;
-                line-height: 1.6;
-                .content-item-link{
-                    text-decoration: underline;
-                    color: rgb(222,79,69);
-                }
-            }
-        }
-    }
+
 </style>
 
 <script>
+    import '../assets/css/info.scss'
     export default {
         name: 'info',
         data(){

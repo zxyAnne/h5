@@ -1,6 +1,6 @@
 <template>
     <div class="gift">
-        <div v-show="0" class="gift-null">
+        <div v-show="1" class="gift-null">
             <img src="static/img/gift_null.png"></img>
             <p>抱歉，暂未获得任何奖品</p>
             <p>你可通过完成每日任务获取抽奖券抽奖</p>
